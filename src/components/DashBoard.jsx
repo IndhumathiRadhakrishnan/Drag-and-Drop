@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import _ from 'lodash';
-import { Droppable, Draggable } from 'react-beautiful-dnd';
 
 function DashBoard() {
     const [searchName, setSearchName] = React.useState('');
@@ -145,16 +144,15 @@ function DashBoard() {
                                                     {
                                                         data.items.filter((val) =>
                                                         {
-                                                            if(searchName === '') return val;
-                                                            else if(val.name.first.toLowerCase().includes(searchName.toLowerCase())) return val;
+                                                            if(searchName === '' || val.name.first.toLowerCase().includes(searchName.toLowerCase())) return val;
                                                             return null;
                                                         }).map((element, index) => {
 
                                                             return (
                                                                 <Draggable key={element.login.uuid} draggableId={element.login.uuid} index={index}>
-                                                                    {(provided, _snapshot) => {
+                                                                    {(providednext, _snapshotnext) => {
                                                                         return (
-                                                                            <div className=' flex flex-col justify-between h-32 w-80 bg-white rounded mt-5'ref={provided.innerRef} {...provided.draggableProps}{...provided.dragHandleProps}>
+                                                                            <div className=' flex flex-col justify-between h-32 w-80 bg-white rounded mt-5'ref={providednext.innerRef} {...providednext.draggableProps}{...providednext.dragHandleProps}>
                                                                                 <div className="p-2">
                                                                                     <div className="font-semibold text-blue-900">{element.name.first}</div>
                                                                                     <div className="truncate">{element.email}</div>
