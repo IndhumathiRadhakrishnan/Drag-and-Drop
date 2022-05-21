@@ -6,13 +6,17 @@ import {
   useParams
 } from "react-router-dom";
 import Sidebar from './components/sidebar';
+import DashBoard from './components/DashBoard';
 
 function Routings() {
   return (
   <>
   <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Sidebar />} />
+          <Route path="/" element={<Sidebar />}>
+            <Route path="" element={<DashBoard />} />
+            </Route>
+          
           <Route path="/about" element={<About />} />
           <Route path="/topics" element={<Topics />} />          
         </Routes>
