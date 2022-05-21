@@ -139,7 +139,7 @@ function DashBoard() {
                                         {data.title} - {data.items.length}
                                     </div>
                                     <Droppable droppableId={key}>
-                                        {(provided, snapshot) => {
+                                        {(provided, _snapshot) => {
                                             return (
                                                 <div className="w-full bg-blue-100 p-2 m-2 h-fit min-h-[10rem]" ref={provided.innerRef} {...provided.droppableProps}>
                                                     {
@@ -152,7 +152,7 @@ function DashBoard() {
 
                                                             return (
                                                                 <Draggable key={element.login.uuid} draggableId={element.login.uuid} index={index}>
-                                                                    {(provided, snapshot) => {
+                                                                    {(provided, _snapshot) => {
                                                                         return (
                                                                             <div className=' flex flex-col justify-between h-32 w-80 bg-white rounded mt-5'ref={provided.innerRef} {...provided.draggableProps}{...provided.dragHandleProps}>
                                                                                 <div className="p-2">

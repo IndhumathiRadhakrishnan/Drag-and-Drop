@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-// import "./styles.css";
-// import ListItem from "./ListItem";
-// import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 
 const Sidebar = () => {
@@ -24,20 +21,7 @@ const Sidebar = () => {
   ];
   const style = {
     navLink: `flex rounded-lg rounded-r-none p-2 py-3 cursor-pointer hover:text-black text-BeeMG-dark-gray text-sm items-center gap-x-4 hover:bg-gradient-to-r from-BeeMG-yellow/50 border-BeeMG-yellow font-semibold ${!open && 'justify-center'} `,
-    // active: `flex rounded-lg rounded-r-none p-2 py-3 cursor-pointer hover:text-black text-BeeMG-dark-gray text-sm items-center gap-x-4 bg-gradient-to-r from-BeeMG-yellow/50 border-r-4 border-BeeMG-yellow text-black font-bold ${!open && 'justify-center'} `,
-
   }
-  // ion-icon {
-  //     color: blue;
-  //   }
-  const [items, setItems] = useState(elements);
-
-  const onDragEnd = (result) => {
-    const newItems = Array.from(items);
-    const [removed] = newItems.splice(result.source.index, 1);
-    newItems.splice(result.destination.index, 0, removed);
-    setItems(newItems);
-  };
 
 
   return (
