@@ -15,13 +15,12 @@ const Sidebar = () => {
     { id: "four", content: "four" }
   ];
   const Menus = [
-    { title: "users", icon: "person-circle-outline", url: "#" },
-    { title: "events", icon: "calendar-clear-outline", url: "#" },
-    { title: "meetings", icon: "videocam-outline", url: "#" },
-    { title: "Cancellation Requests ", icon: "ban-outline", url: "#" },
-    { title: "Transactions", icon: "swap-horizontal-outline", url: "#" },
-    { title: "Reported Users", icon: "people-circle-outline", url: "#" },
-    { title: "Feedbacks ", icon: "pricetags-outline", url: "#" },
+    { title: "Performance", icon: "speedometer-outline", url: "#" },
+    { title: "Requests", icon: "file-tray-full-outline", url: "#" },
+    { title: "Projects", icon: "bag-add-outline", url: "#" },
+    { title: "Candidates", icon: "people-outline", url: "#" },
+    { title: "Settings", icon: "settings-outline", url: "#" },
+
   ];
   const style = {
     navLink: `flex rounded-lg rounded-r-none p-2 py-3 cursor-pointer hover:text-black text-BeeMG-dark-gray text-sm items-center gap-x-4 hover:bg-gradient-to-r from-BeeMG-yellow/50 border-BeeMG-yellow font-semibold ${!open && 'justify-center'} `,
@@ -67,7 +66,7 @@ const Sidebar = () => {
                 >
                   <ion-icon name={Menu.icon} class="h-6 w-6 text-white" ></ion-icon>
                   <div className="flex flex-row flex-none gap-1">
-                    <span className={`${!open && "hidden"} origin-left duration-200 capitalize truncate`}>
+                    <span className={`${!open && "hidden"} origin-left duration-200 capitalize truncate text-white`}>
                       {Menu.title}
                     </span>
                   </div>
