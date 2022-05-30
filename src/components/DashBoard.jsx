@@ -12,11 +12,6 @@ import cloud from '../Assets/Icons/cloud-upload-outline.svg'
 import star from '../Assets/Icons/star-outline.svg'
 import ellipsis from '../Assets/Icons/ellipsis-vertical-outline.svg'
 
-
-
-
-
-
 function DashBoard() {
     const [searchName, setSearchName] = React.useState('');
     const [round, setRound] = React.useState({
@@ -99,7 +94,7 @@ function DashBoard() {
                         </div>
                         <button className='p-1 px-2 bg-indigo-900 text-white capitalize rounded-md text-sm flex items-center'><ion-icon name="add-outline" ></ion-icon> Add New</button>
                         <span class="relative inline-block">
-                            <img src={gift} className="w-6 h-6  hover:bg-gray-100/20 rounded-full fill-current p-2" alt="aperture" />
+                            <img src={gift} className="w-8 h-8  hover:bg-gray-100/20 rounded-full fill-current p-2" alt="aperture" />
                             <span class="absolute top-2 right-1 inline-flex  px-1.5 py-1 text-xs font-bold leading-none transform translate-x-1/2 -translate-y-1/2 text-white bg-red-600 rounded-full">2</span>
                         </span>
                         <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center">S</div>
